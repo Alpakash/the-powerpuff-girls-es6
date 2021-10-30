@@ -1,0 +1,24 @@
+{
+  "name": "the-powerpuff-girls-es6",
+  "version": "1.0.0",
+  "description": "A cool app to lookup all the powerpuff girls episodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 1",
+    "start": "start http://localhost:1998 && node node/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alpakash/the-powerpuff-girls-es6.git"
+  },
+  "author": "Akash Soedamah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alpakash/the-powerpuff-girls-es6/issues"
+  },
+  "homepage": "https://github.com/Alpakash/the-powerpuff-girls-es6#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
