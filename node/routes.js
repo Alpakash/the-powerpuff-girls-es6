@@ -1,26 +1,21 @@
 let express = require("express");
 
 let router = express.Router();
-const path = require("path");
-
-function searchFromRoot(htmlFile) {
-	return path.join(__dirname, `../${htmlFile}.html`);
-}
 
 router.get("/", (req, res) => {
-	res.sendFile(searchFromRoot("index"));
+	res.render("index");
 });
 
 router.get("/shows", (req, res) => {
-	res.sendFile(searchFromRoot("/pages/shows"));
+	res.render("shows");
 });
 
 router.get("/show/:name", (req, res) => {
-	res.sendFile(searchFromRoot("/pages/show"));
+	res.render("show", { showName: req.params.name });
 });
 
 router.get("/show/ep/:number", (req, res) => {
-	res.sendFile(searchFromRoot("/pages/episode"));
+	res.render("episode", { number: req.params.number });
 });
 
 module.exports = router;

@@ -5,42 +5,56 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The Powerpuff Girls</title>
+	<link type="text/css" rel="stylesheet" href="css/home.css">
 </head>
 <body>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/shows">Shows</a></li>
-			<!-- <li><a href="location.history()">Back</a></li> -->
-		</ul>
-	</nav>
-	<h1>Getting the set-up ready</h1>
-	<h3>The three PPG's are:
-		<em>
-			<span style="color: aqua">Bubbles</span>,
-			<span style="color: red">Blossom</span> and...
-			<span style="color: greenyellow">Buttercup</span>!
-		</em>
-	</h3>
+	<div class="home-content">
+		<div class="header">
+		<h1>Mojo ShowShow</h1>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/shows">Shows</a></li>
+					<!-- <li><a href="location.history()">Back</a></li> -->
 
-	<h3 style="margin-top: 80px;">Describing the mission</h3>
-	<ol>
-		<li>Creating a SPA</li>
-		<li>Make a NodeJs server with routes</li>
-		<li>Fetch the API</li>
-		<li>Iterate over the data object</li>
-		<li>Make tests for the expected data</li>
-		<li>Style the data in a nice view</li>
-		<li>Create documentation for the app</li>
-		<li>Build the app</li>
-		<li>Deploy the app</li>
-	</ol>
+				</ul>
+			</nav>
+		</div>
+		<div class="the-girls">
+			<h3>The three PPG's are:
+				<em>
+					<span style="color: aqua">Bubbles</span>,
+					<span style="color: red">Blossom</span> and...
+					<span style="color: greenyellow">Buttercup</span>!
+				</em>
+			</h3>
+		</div>
+
+		<h3 class="mission-title">Describing the mission</h3>
+
+		<div class="mission">
+			<ol>
+				<li><del>Creating a SPA</del></li>
+				<li><del>Make a NodeJs server with routes</del></li>
+				<li><del>Fetch the API</del></li>
+				<li>Iterate over the data object</li>
+				<li>Make tests for the expected data</li>
+				<li>Style the data in a nice view</li>
+				<li>Create documentation for the app</li>
+				<li>Build the app</li>
+				<li>Deploy the app</li>
+			</ol>
+		</div>
+	</div>
+	<script src="/js/fetch.js"></script>
 </body>
 </html>
 
 <!--
 
 API: https://www.tvmaze.com/api
+API The powerpuff girls: https://api.tvmaze.com/search/shows?q=the%20powerpuff%20girls
+
 		- 2 routes: TV Shows & Episode Info
 		- Make a Git repo for it
 		- Make the a responsive design with at least 1 breakpoint
