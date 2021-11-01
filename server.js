@@ -1,14 +1,15 @@
 const express = require("express");
-const allRoutes = require("./routes");
+require("dotenv").config();
 
 const app = express();
-const port = 1998;
+const port = process.env.SERVER_PORT;
 
-app.set("view engine", "ejs");
-app.use("/", allRoutes);
+// serve static files such as e.g. images or css
+app.use(express.static("src"));
 
-// to serve static files such as e.g. images or css
-app.use(express.static("public"));
+app.get("/", (req, res) => {
+	res.sendFile("index.html");
+});
 
 app.listen(port, () => {
 	console.log(
