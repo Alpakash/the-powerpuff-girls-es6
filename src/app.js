@@ -1,13 +1,13 @@
-import Home         from './views/pages/Home.js'
-import Show        from './views/pages/Show.js'
+import Home from './views/pages/Home.js'
+import Show from './views/pages/Show.js'
 import Episode from "./views/pages/Episode.js";
-import Error404     from './views/pages/Error404.js'
-import About     from './views/pages/About.js'
+import Error404 from './views/pages/Error404.js'
+import About from './views/pages/About.js'
 
-import Navbar       from './views/components/Navbar.js'
-import Footer    from './views/components/Footer.js'
+import Navbar from './views/components/Navbar.js'
+import Footer from './views/components/Footer.js'
 
-import Utils        from './services/Utils.js'
+import Utils from './services/Utils.js'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
