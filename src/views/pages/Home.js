@@ -6,7 +6,7 @@ let getShow = async () => {
 
 		const json = await response.json();
 
-		return json[2];
+		return json[1];
 	} catch (error) {
 		console.log("Error getting documents", err);
 	}
@@ -16,8 +16,6 @@ let Home = {
 	render: async () => {
 		let data = await getShow();
 		let show = data.show;
-
-		console.log(show);
 
 		let view = /*html*/ `
 			<section class="section">

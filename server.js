@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.SERVER_PORT;
 
-// serve static files such as e.g. images or css
+// Specify root to serve static files e.g. image or css files
 app.use(express.static("src"));
 
 app.get("/", (req, res) => {

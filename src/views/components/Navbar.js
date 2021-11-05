@@ -3,8 +3,8 @@ let Navbar = {
 		let view = /*html*/ `
 			<nav>
 				<img
-					src="http://assets.stickpng.com/images/59cfc988d3b1936210a5dde0.png"
-					alt="The logo of Mojo Jojo"
+					src="./assets/copyright-powerpuffs.png"
+					alt="The powerpuff girls are flying"
 					width="300px"
 				/>
 				<ul>
