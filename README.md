@@ -15,4 +15,4 @@ npm install
 npm start
 ```
 
-Watch the live demo on:
+Watch the live demo on:	https://powerpuffgirls.herokuapp.com/
