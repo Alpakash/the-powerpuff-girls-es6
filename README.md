@@ -1,9 +1,10 @@
-# The Powerpuff Girls App - 1998
-
-![The birth of the Powerpuff girls](./src/assets/powerpuff-birth.jpg)
+<h1 align="center">The Powerpuff Girls App - 1998</h1>
+<p align="center">
+	<img align="center" src="./src/assets/powerpuff-birth.jpg" style="margin-top: 30px;" alt="The birth of the Powerpuff girls" width="400px">
+</p>
 
 ---
-##### Made this project as a job assignment :)
+##### Made this project as a job assignment
 
 
 🔗 | 1. git clone this repository
@@ -21,13 +22,4 @@ npm install
 npm start
 ```
 ---
-Or watch the live demo on:	https://powerpuffgirls.herokuapp.com/
-
-<style type="text/css">
-	img, h1 {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 550px;
-	}
-</style>
+Or watch the live demo on https://powerpuffgirls.herokuapp.com
