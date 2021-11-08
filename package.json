@@ -2,10 +2,10 @@
   "name": "the-powerpuff-girls-es6",
   "version": "1.0.0",
   "description": "A cool app to lookup all the powerpuff girls episodes",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "start": "start http://localhost:1998 && nodemon server.js",
+    "start": "nodemon server.js",
     "build": "babel src -d build"
   },
   "repository": {
