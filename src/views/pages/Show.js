@@ -17,10 +17,19 @@ let Show = {
 	render: async () => {
 		let request = Utils.parseRequestURL();
 		let episodesList = await getEpisodes(request.id);
+		let firstButton = document.getElementById("first-button");
+
+		document.getElementById("title").innerHTML = "EPISODES";
+		document.getElementById("subtitle").innerText = "";
+		document.getElementById("description").innerHTML = "Click on an episode in the list for more information.";
+		firstButton.innerHTML = "Back";
+		firstButton.classList.remove("hidden");
+		firstButton.setAttribute("href", `/#`);
+
+		document.getElementById("image").src = "./assets/powerpuff-birth.jpg";
 
 		return /*html*/ `
 			<section class="section">
-				<h1 class="title">Episodes</h1>
 						${episodesList
 							.map(
 								(episode, index) => /*html*/ `

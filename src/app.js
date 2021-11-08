@@ -2,7 +2,6 @@ import Home from './views/pages/Home.js'
 import Show from './views/pages/Show.js'
 import Episode from "./views/pages/Episode.js";
 import Error404 from './views/pages/Error404.js'
-import About from './views/pages/About.js'
 
 import Navbar from './views/components/Navbar.js'
 import Footer from './views/components/Footer.js'
@@ -13,7 +12,6 @@ import Utils from './services/Utils.js'
 const routes = {
 	'/': Home,
 	'/show/:id': Show,
-	'/about': About,
 	'/ep/:id' : Episode,
 };
 
@@ -35,7 +33,12 @@ const router = async () => {
 	// Get the page from our hash of supported routes.
 	// If the parsed URL is not in our list of supported routes, select the 404 page instead
 	let page = routes[parsedURL] ? routes[parsedURL] : Error404
-	content.innerHTML = await page.render();
+
+	if ((await page.render()) === undefined) {
+		content.innerHTML = "";
+	} else {
+		content.innerHTML = await page.render();
+	}
 }
 
 // Listen on hash change:

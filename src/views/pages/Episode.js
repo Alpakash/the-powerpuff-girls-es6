@@ -16,16 +16,16 @@ let Episode = {
 	render: async () => {
 		let request = Utils.parseRequestURL();
 		let episode = await getPost(request.id);
+		let firstButton = document.getElementById("first-button");
 
-		return /*html*/ `
-			<section class="section">
-				<img src="${episode.image.medium}" />
-				<h1> Name: ${episode.name}</h1>
-				<h3> Season: ${episode.season} - Episode ${episode.number}</h3>
-				<h4>Aired ${episode.airdate}</h4>
-				<p> Description: ${episode.summary} </p>
-			</section>
-		`;
+		document.getElementById("image").src = episode.image.original;
+		document.getElementById("title").innerHTML = episode.name;
+		document.getElementById("subtitle").innerHTML = `Season ${episode.season} - Episode ${episode.number}`;
+		document.getElementById("airdate").innerHTML = episode.airdate;
+		document.getElementById("description").innerHTML = episode.summary;
+		firstButton.innerHTML = "Back";
+		firstButton.classList.remove("hidden");
+		firstButton.setAttribute("href", `/#/show/1955`);
 	}
 };
 

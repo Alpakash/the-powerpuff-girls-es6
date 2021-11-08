@@ -16,18 +16,17 @@ let Home = {
 	render: async () => {
 		let data = await getShow();
 		let show = data.show;
+		let firstButton = document.getElementById("first-button");
+		let image = document.getElementById("image");
 
-		let view = /*html*/ `
-			<section class="section">
-				<h1 class="title"> ${show.name} @ ${show.network.name} </h1>
-				<h3 class="subtitle">Premiered: ${show.premiered}</h3>
-				<img src=${show.image.original} width="250px;" />
-				${show.summary}
-				<a href="#/show/${show.id}">Watch episode list</a>
-			</section>
-		`;
-
-		return view;
+		image.src = show.image.original;
+		image.setAttribute("alt", "The powerpuff girls are flying");
+		document.getElementById("title").innerHTML = show.name;
+		document.getElementById("subtitle").innerText = show.network.name;
+		document.getElementById("description").innerHTML = show.summary;
+		firstButton.innerHTML = "Episode List";
+		firstButton.classList.remove("hidden");
+		firstButton.setAttribute("href", `#/show/${show.id}`);
 	}
 };
 
