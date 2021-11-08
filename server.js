@@ -2,7 +2,7 @@ const express = require("express");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.SERVER_PORT || 8080 /* || 1998*/;
+const port = process.env.SERVER_PORT || 8080;
 
 // Specify root to serve static files e.g. image or css files
 app.use(express.static("src"));
@@ -13,6 +13,6 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
 	console.log(
-		`Hey Professor Utonium, the port number is ${port}, not 1998, the port this show was aired for the first time!`
+		`Hey professor, the server is running on port number ${port}!`
 	);
 });
