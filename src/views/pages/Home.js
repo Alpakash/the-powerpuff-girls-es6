@@ -27,7 +27,7 @@ let Home = {
 		firstButton.innerHTML = "Episode List";
 		firstButton.classList.remove("hidden");
 		firstButton.setAttribute("href", `#/show/${show.id}`);
-	}
+	},
 };
 
 export default Home;

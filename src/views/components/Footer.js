@@ -49,6 +49,9 @@ let Bottombar = {
 							<li>
 								<a href="/#/ep/160178" class="text-gray-600 hover:text-gray-800">First Episode</a>
 							</li>
+							<li>
+								<a href="/#/cube" class="text-gray-600 hover:text-gray-800">Random 3D Cube</a>
+							</li>
 						</ul>
 					</div>
 				</div>

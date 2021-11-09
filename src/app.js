@@ -2,6 +2,7 @@ import Home from './views/pages/Home.js'
 import Show from './views/pages/Show.js'
 import Episode from "./views/pages/Episode.js";
 import Error404 from './views/pages/Error404.js'
+import RandomCube from './views/pages/RandomCube.js'
 
 import Navbar from './views/components/Navbar.js'
 import Footer from './views/components/Footer.js'
@@ -12,7 +13,8 @@ import Utils from './services/Utils.js'
 const routes = {
 	'/': Home,
 	'/show/:id': Show,
-	'/ep/:id' : Episode,
+	'/ep/:id': Episode,
+	'/cube': RandomCube,
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
