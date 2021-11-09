@@ -69,9 +69,13 @@ model-viewer {
 	height: 350px;
 	width: 100%;
 	position: absolute;
-	top: 0;
+	top: 30px;
 	z-index: 10;
 	outline: none;;
+}
+
+model-viewer::part(default-progress-bar) {
+	display: none;
 }
 
 @media only screen and (max-width: 767px) {
