@@ -1,4 +1,4 @@
-let RandomCube = {
+let RandomObject = {
 	render: async () => {
 		document.getElementById("image").innerHTML = null;
 		document.getElementById("title").innerHTML = null;
@@ -9,11 +9,21 @@ let RandomCube = {
 						src="./assets/projectName.gltf"
 						alt="Random 3d block"
 						auto-rotate auto-rotate-delay=0
-						ios-src="./assets/projectName.gltf"
+						progress=0
 					></model-viewer>
+
+					<model-viewer
+						src="./assets/circle.glb"
+						progress=0
+						alt="A 3D model of a circle"
+						auto-rotate=""
+						camera-controls=""
+						background-color="#455A64"
+					></model-viewer>
+
 					`;
 		return view;
 	}
 };
 
-export default RandomCube;
+export default RandomObject;
