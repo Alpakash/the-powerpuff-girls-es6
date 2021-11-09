@@ -16,9 +16,9 @@ var _Error = require('./views/pages/Error404.js');
 
 var _Error2 = _interopRequireDefault(_Error);
 
-var _RandomCube = require('./views/pages/RandomCube.js');
+var _RandomObject = require('./views/pages/RandomObject.js');
 
-var _RandomCube2 = _interopRequireDefault(_RandomCube);
+var _RandomObject2 = _interopRequireDefault(_RandomObject);
 
 var _Navbar = require('./views/components/Navbar.js');
 
@@ -41,7 +41,7 @@ var routes = {
 	'/': _Home2.default,
 	'/show/:id': _Show2.default,
 	'/ep/:id': _Episode2.default,
-	'/cube': _RandomCube2.default
+	'/object': _RandomObject2.default
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
