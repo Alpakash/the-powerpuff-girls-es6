@@ -34,11 +34,18 @@ let Show = {
 							.map(
 								(episode, index) => /*html*/ `
 									<div class="styled-list">
-										<a href="#/ep/${episode.id}">
-											<img class="episode-image" src="${episode.image.medium}" />
-										</a>
-										<a class="episode-link" href="#/ep/${episode.id}">${episode.name}</a>
+										<div class="grid-item">
+											<a href="#/ep/${episode.id}">
+												<img class="episode-image" src="${episode.image.medium}" />
+											</a>
+										</div>
+										<div class="grid-item">
+											<a class="episode-link" href="#/ep/${episode.id}">${episode.name}</a>
+										</div>
+
+										<div class="grid-item">
 										<span class="episode-number">${index + 1}</span>
+										</div>
 									</div>
 								`
 							)
