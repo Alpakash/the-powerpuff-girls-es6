@@ -1,8 +1,8 @@
-let Navbar = {
+const Navbar = {
 	render: async () => {
 		document.getElementById("footer_container").classList.remove("hidden");
 
-		let view = /*html*/ `
+		const view = /*html*/ `
 			<div class="relative bg-white overflow-hidden">
 				<div class="mx-auto">
 					<div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 max-w-5xl lg:w-full lg:pb-28 xl:pb-32">

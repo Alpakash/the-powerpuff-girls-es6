@@ -1,4 +1,4 @@
-let Error404 = {
+const Error404 = {
 	render: async () => {
 		document.getElementById("image").src = "./assets/bubbles-cry.gif";
 		document.getElementById("title").innerHTML = "404 Bubbles is lost...";

@@ -1,4 +1,4 @@
-let assert = require("chai").assert;
+import { assert } from "chai";
 // let app = require("../src/app").router;
 
 // Getting started from mocha docs <- sorry didn't fix due to time constraints #deadline

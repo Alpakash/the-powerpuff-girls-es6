@@ -1,6 +1,6 @@
 import Utils from "../../services/Utils.js";
 
-let getPost = async (id) => {
+const getPost = async (id) => {
 	try {
 		const response = await fetch(`https://api.tvmaze.com/episodes/` + id);
 
@@ -12,11 +12,11 @@ let getPost = async (id) => {
 	}
 };
 
-let Episode = {
+const Episode = {
 	render: async () => {
-		let request = Utils.parseRequestURL();
-		let episode = await getPost(request.id);
-		let firstButton = document.getElementById("first-button");
+		const request = Utils.parseRequestURL();
+		const episode = await getPost(request.id);
+		const firstButton = document.getElementById("first-button");
 
 		document.getElementById("image").src = episode.image.original;
 		document.getElementById("title").innerHTML = episode.name;

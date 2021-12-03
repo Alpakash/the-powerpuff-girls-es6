@@ -1,4 +1,4 @@
-let getShow = async () => {
+const getShow = async () => {
 	try {
 		const response = await fetch(
 			`https://api.tvmaze.com/search/shows?q=the%20powerpuff%20girls`
@@ -8,16 +8,16 @@ let getShow = async () => {
 
 		return json[2];
 	} catch (error) {
-		console.log("Error getting documents", err);
+		console.log("Error getting documents", error);
 	}
 };
 
-let Home = {
+const Home = {
 	render: async () => {
-		let data = await getShow();
-		let show = data.show;
-		let firstButton = document.getElementById("first-button");
-		let image = document.getElementById("image");
+		const data = await getShow();
+		const show = data.show;
+		const firstButton = document.getElementById("first-button");
+		const image = document.getElementById("image");
 
 		image.src = show.image.original;
 		image.setAttribute("alt", "The powerpuff girls are flying");

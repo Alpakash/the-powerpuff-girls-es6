@@ -1,6 +1,6 @@
-let Bottombar = {
+const Bottombar = {
 	render: async () => {
-		let view = /*html*/ `
+		const view = /*html*/ `
 		 <footer class="border-t border-gray-200 ">
 			<div
 				class="

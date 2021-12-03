@@ -1,10 +1,10 @@
 const Utils = {
 	//  Parse a url and break it into resource, id and verb
 	parseRequestURL: () => {
-		let url = location.hash.slice(1).toLowerCase() || "/";
-		let r = url.split("/");
+		const url = location.hash.slice(1).toLowerCase() || "/";
+		const r = url.split("/");
 
-		let request = {
+		const request = {
 			resource: undefined,
 			id: undefined,
 			verb: undefined,

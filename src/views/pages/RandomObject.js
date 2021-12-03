@@ -1,11 +1,11 @@
-let RandomObject = {
+const RandomObject = {
 	render: async () => {
 		document.getElementById("image").innerHTML = null;
 		document.getElementById("title").innerHTML = null;
 		document.getElementById("subtitle").innerHTML = null;
 		document.getElementById("description").innerHTML = null;
 
-		let view = /*html*/ `
+		const view = /*html*/ `
 			<model-viewer
 				src="./assets/circle.glb"
 				alt="A 3D model of a circle"
