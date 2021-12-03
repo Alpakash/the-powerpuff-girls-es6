@@ -10,29 +10,15 @@
 	justify-content: center;
 }
 
-/* Reading this https://css-tricks.com/snippets/css/complete-guide-grid/ refresh the grid-system knowledge
-	- finish up tomorrow note-for-self @ 22 november 2021, 15:00 ;-)
- */
-.styled-list {
-	display: grid;
-	grid-template-columns: 30% 60% 10%;
-	/* flex-direction: row; */
-}
-
-.grid-item {
-  text-align: left;
-}
-
 .episode-image {
 	height: 300px;
 	margin-bottom: 5px;
-	flex: 1;
 }
 
 .episode-link {
 	flex: 1;
 	font-size: 30px;
-	margin-left: 100px;
+	margin-left: 20px;
 	text-transform: uppercase;
 	color: black;
 	text-decoration: none;

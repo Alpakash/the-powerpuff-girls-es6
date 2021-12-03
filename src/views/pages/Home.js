@@ -19,7 +19,7 @@ const Home = {
 		const firstButton = document.getElementById("first-button");
 		const image = document.getElementById("image");
 
-		image.src = show.image.original;
+		image.src = "./assets/powerpuffs-art.jpg";
 		image.setAttribute("alt", "The powerpuff girls are flying");
 		document.getElementById("title").innerHTML = show.name;
 		document.getElementById("subtitle").innerText = show.network.name;

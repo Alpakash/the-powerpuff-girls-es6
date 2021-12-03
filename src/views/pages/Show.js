@@ -33,18 +33,23 @@ const Show = {
 						${episodesList
 							.map(
 								(episode, index) => /*html*/ `
-									<div class="styled-list">
-										<div class="grid-item">
-											<a href="#/ep/${episode.id}">
-												<img class="episode-image" src="${episode.image.medium}" />
+									<div class="flex flex-wrap sm:grid sm:grid-cols-12 sm:gap-2">
+											<div class="sm:col-span-4 w-full">
+												<a href="#/ep/${episode.id}">
+													<img class="episode-image w-full" src="${episode.image.medium}" />
+												</a>
+											</div>
+
+										<div class="order-3 col-span-1 sm:col-span-6 flex flex-wrap content-center">
+											<a class="episode-link text-sm sm:text-3xl" href="#/ep/${episode.id}">
+												${episode.name}
 											</a>
 										</div>
-										<div class="grid-item">
-											<a class="episode-link" href="#/ep/${episode.id}">${episode.name}</a>
-										</div>
 
-										<div class="grid-item">
-										<span class="episode-number">${index + 1}</span>
+										<div class="justify-center order-2 sm:order-last col-span-1 sm:col-start-11 sm:col-span-2 flex flex-wrap content-center ml-6">
+											<span class="w-24 sm:w-28 episode-number text-5xl sm:text-8xl">${
+												index + 1
+											}</span>
 										</div>
 									</div>
 								`
