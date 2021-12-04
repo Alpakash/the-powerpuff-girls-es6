@@ -4,7 +4,7 @@
   "description": "A cool app to lookup all the powerpuff girls episodes",
   "main": "server.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --watch",
     "start": "node server.js",
     "build": "babel src -d build",
     "lint": "eslint ."

@@ -1,9 +1,27 @@
-import { assert } from "chai";
+const expect = require("chai").expect;
 // let app = require("../src/app").router;
 
-// Getting started from mocha docs <- sorry didn't fix due to time constraints #deadline
+
+// Learning the expect BDD chai assertion style
 describe("App", function() {
-	it("should return parsed url with array with length of 3", function() {
-		assert.equal(-1 , -1);
+	const test = "abc",
+		imTrue = true,
+		imUndefined = undefined,
+		imArray = [1, 2, 3];
+
+	it("Expect test variable to include abc", function() {
+		expect(test).to.have.length(3);
 	});
+
+	it("Expect value to be true" , () => {
+		expect(imTrue).to.be.true;
+	})
+
+	it("Expect value to be undefined" , () => {
+		expect(imUndefined).to.be.undefined;
+	})
+
+	it("Expect value to be Array" , () => {
+		expect(imArray).to.be.a("array");
+	})
 });
