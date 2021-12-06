@@ -8,7 +8,6 @@
 		]
 	],
 	"plugins": [
-		"@babel/plugin-transform-runtime",
-		"import"
+		"@babel/plugin-transform-runtime"
 	]
 }
