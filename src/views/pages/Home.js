@@ -1,3 +1,5 @@
+import "regenerator-runtime/runtime";
+
 const getShow = async () => {
 	try {
 		const response = await fetch(
