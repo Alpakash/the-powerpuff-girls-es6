@@ -1,19 +1,17 @@
 const assert = require("chai").assert;
-// const router = require("../src/app").router;
+import { router } from "../src/app";
 
 // Learning the assert TDD chai assertion style
-describe("App", function() {
+describe("Testing the testing", function() {
 	const test = "abc",
 		imTrue = true,
 		imUndefined = undefined,
 		imArray = [1, 2, 3];
 
 
-	// it("Let this test fail", () => {
-	// 	console.log(router);
-
-	// 	assert.isFunction("", "message");
-	// })
+	it("The router should be a function", () => {
+		assert.isFunction(router, "message");
+	})
 
 	it("Test variable should have a length of 3", () => {
 		assert.lengthOf(test, 3);
