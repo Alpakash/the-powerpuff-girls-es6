@@ -37,3 +37,10 @@ Alright so, on days that I did not commit a thing but did research or spent time
 I now got the Brave browser working, also I will use Firefox for local development (due to that it works nicely with CSS). Also I did set-up a Password Manager (Bitwarden) and 2FA (Authy) for all my accounts. Further I did install a MacOS theme for my Windows 11 OS and also I configured the iOS 15 theme on my Android phone. Just for fun and aesthetic purposes.
 
 Tomorrow I will put in some work in this repo and finish up the TDD tests.
+
+## Day 11
+Did put in an hour into a quick refresh with the videos in the Microsoft docs, Beginners to JavaScript series:
+- JSON & Objects (Lessons 41, 42, 43 and 44)
+- Promises + Async/Await (Lessons 45, 46, 47 and 48)
+- npm (Lesson 50)
+- Tomorrow I'll continue the TDD tests
