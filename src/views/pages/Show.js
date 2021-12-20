@@ -1,6 +1,6 @@
 import Utils from "../../services/Utils.js";
 
-const getEpisodes = async (id) => {
+export const getEpisodes = async (id) => {
 	try {
 		const response = await fetch(
 			`https://api.tvmaze.com/shows/${id}/episodes`
