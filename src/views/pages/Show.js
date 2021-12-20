@@ -5,9 +5,9 @@ export const getEpisodes = async (id) => {
 		const response = await fetch(
 			`https://api.tvmaze.com/shows/${id}/episodes`
 		);
-		const json = await response.json();
 
-		return json;
+		const data = await response;
+		return data.json();
 	} catch (err) {
 		console.log("Error getting documents", err);
 	}

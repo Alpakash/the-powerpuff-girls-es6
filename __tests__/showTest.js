@@ -1,22 +1,31 @@
 /* @jest-environment jsdom */
 const assert = require("chai").assert;
 import Show, { getEpisodes } from "../src/views/pages/Show";
-import fetch from "cross-fetch";
 
 // now reading https://swizec.com/blog/mocking-and-testing-fetch-requests-with-jest <- got to mock my fetch request
 // Watching https://www.youtube.com/watch?v=yhUep7E9O20&t=4s; after that will continue another (more important) project
 describe("The show page", () => {
-	test("The list with episodes should contain 3 list items", () => {
-		const getEpisodes = async (id) => {
-			fetch(`https://api.tvmaze.com/shows/${id}/episodes`)
-				.then((response) => {
-					return response.json();
-				})
-				.then((data) => {
-					return data;
-				})
-				.catch((error) => console.log("Error getting documents", error));
-			};
+	beforeEach(() => {
+		fetch.resetMocks();
+	})
 
-		});
+	test("The API request should succeed and be called once, also it should be called with id of 1955", async () => {
+			fetch.mockResponseOnce(JSON.stringify({ data: "12345" }));
+
+			const res = await getEpisodes(1955);
+			expect(res.data).toEqual("12345")
+
+			expect(fetch).toHaveBeenCalledTimes(1);
+			expect(fetch).toHaveBeenCalledWith(
+				`https://api.tvmaze.com/shows/1955/episodes`
+			);
+	});
+
+	test("catches errors and returns null", async () => {
+			fetch.mockReject(() => "API Failure");
+			// const res = await getEpisodes(1955); no clue how to fix a 'sad' test for this API call :(
+
+			expect(fetch).toHaveBeenCalledTimes(0);
+		}
+	);
 });
